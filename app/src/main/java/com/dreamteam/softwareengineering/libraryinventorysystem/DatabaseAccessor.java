@@ -22,16 +22,37 @@ public class DatabaseAccessor {
 
     public static String tempFileName = "TEMP.txt";
 
-    public static boolean AuthenticateUserLogin(String username, String password){
-       return true;
+    public static String AuthenticateUserLogin(String username, String password, Context context) throws IOException{
         //if username == admin and password = admin, allow admin access
         //else, check text file for matching credentials and authority level
-        //TODO
+        if (username.equals("Admin") && password.equals("Admin")){
+            return "Admin";
+        }
+
+        FileInputStream fis = context.openFileInput(loginFileName);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+
+        String currentLine = reader.readLine();
+        while (currentLine != null){
+            String[] credentials = currentLine.split(",");
+            if (credentials[0].equals(username)){
+                if (credentials[1].equals(password)){
+                    return credentials[2];
+                }
+            }
+        }
+        fis.close();
+
+        return null;
     }
 
     //authority levels are: Manager, Employee, Customer
-    public static void AddNewUserLogin(String username, String password, String authorityLevel){
-        //TODO
+    public static void AddNewUserLogin(String username, String password, String authorityLevel, Context context) throws IOException{
+        String newUserLogin = username + "," + password + "," + authorityLevel + "\n";
+
+        FileOutputStream fos = context.openFileOutput(loginFileName, Context.MODE_APPEND);
+        fos.write(newUserLogin.getBytes());
+        fos.close();
     }
 
     public static void CreateNewCustomerAccount(String customerUserName, Context context) throws IOException{
@@ -137,7 +158,44 @@ public class DatabaseAccessor {
         return inventoryList;
     }
 
+    public static void AddCustomerData(String customerName,
+                                           String idNumber,
+                                           String age,
+                                           String authorityLevel,
+                                           String homeAddress,
+                                           String emailAddress,
+                                           Context context) throws IOException{
+        String customerDataLine = customerName + "," +
+                                    idNumber + "," +
+                                    age + "," +
+                                    authorityLevel + "," +
+                                    homeAddress + "," +
+                                    emailAddress + "," + "\n";
+
+        FileOutputStream fos = context.openFileOutput(customerDataFileName, Context.MODE_APPEND);
+        fos.write(customerDataLine.getBytes());
+        fos.close();
+    }
+
     public static void ModifyCustomerData(){
         //TODO
+    }
+
+    public static String[] ViewCustomerData(String customerName, String idNumber, Context context) throws IOException{
+        FileInputStream fis = context.openFileInput(customerDataFileName);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+
+        String currentLine = reader.readLine();
+        while (currentLine != null){
+            String[] customerData = currentLine.split(",");
+            if (customerData[0].equals(customerName)){
+                if (customerData[1].equals(idNumber)){
+                    return customerData;
+                }
+            }
+        }
+        fis.close();
+
+        return new String[] {null, null, null, null, null, null};
     }
 }
