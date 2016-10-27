@@ -21,11 +21,12 @@ public class EmployeeInventoryDelete extends AppCompatActivity {
         setContentView(R.layout.activity_employee_inventory_delete);
         context = getApplicationContext();
         bookNameTextBox = (EditText) findViewById(R.id.bookTitleDelete);
-        final String bookNameText = bookNameTextBox.getText().toString();
+
         DeleteBook = (Button) findViewById(R.id.BookDeleteButton);
         DeleteBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String bookNameText = bookNameTextBox.getText().toString();
                 try {
                     DatabaseAccessor.RemoveBookFromInventory(bookNameText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);

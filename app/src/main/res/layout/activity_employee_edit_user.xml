@@ -49,25 +49,36 @@
         android:id="@+id/customerID"
         android:hint="customer ID #" />
 
-    <EditText
+    <Button
+        android:text="Update User"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/newUsername"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/newEmailAddress"
-        android:hint="New Username" />
+        android:layout_below="@+id/newAge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/editUpdateButton"
+        android:textAllCaps="false" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/newEmailAddress"
-        android:hint="New Email Address"
-        android:layout_below="@+id/newUsername"
-        android:layout_alignStart="@+id/ResetPasswordText" />
+        android:id="@+id/newPassword"
+        android:layout_below="@+id/customerID"
+        android:layout_alignStart="@+id/newUsername"
+        android:layout_marginTop="10dp"
+        android:hint="New Password" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newAge"
+        android:hint="New Age"
+        android:layout_below="@+id/newAddress"
+        android:layout_alignStart="@+id/newAddress" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -84,19 +95,19 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/newAge"
-        android:layout_below="@+id/newAddress"
-        android:layout_alignStart="@+id/newAddress"
-        android:hint="New Age" />
+        android:id="@+id/newEmailAddress"
+        android:hint="New Email Address"
+        android:layout_below="@+id/newUsername"
+        android:layout_alignStart="@+id/ResetPasswordText" />
 
-    <Button
-        android:text="Update User"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newAge"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:id="@+id/editUpdateButton"
-        android:textAllCaps="false" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newUsername"
+        android:hint="New Username"
+        android:layout_below="@+id/newPassword"
+        android:layout_alignStart="@+id/newEmailAddress" />
 
 </RelativeLayout>

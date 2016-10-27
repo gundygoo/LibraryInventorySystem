@@ -21,11 +21,12 @@ public class EmployeeInventoryAdd extends AppCompatActivity {
         setContentView(R.layout.activity_employee_inventory_add);
         context = getApplicationContext();
         bookNameTextBox = (EditText) findViewById(R.id.addBookTextField);
-        final String bookNameText = bookNameTextBox.getText().toString();
+
         AddBook = (Button) findViewById(R.id.addItemButton);
         AddBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String bookNameText = bookNameTextBox.getText().toString();
                 try {
                     DatabaseAccessor.AddBookToInventory(bookNameText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);

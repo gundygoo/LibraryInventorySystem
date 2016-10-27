@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
+        <!--<activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -25,12 +25,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
         <activity android:name=".EmployeeCheckOut" />
         <activity android:name=".EmployeeWelcome" />
         <activity
             android:name=".Login"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".EmployeeRegister" />
         <activity android:name=".employeeCheckIn" />
         <activity android:name=".employeeViewInventory" />
@@ -42,7 +47,7 @@
         <activity android:name=".EmployeeInventoryDelete" />
         <activity android:name=".EmployeeRecoverPassword" />
         <activity android:name=".EmployeeViewCustomer" />
-        <activity android:name=".UserBooksCheckedOut"></activity>
+        <activity android:name=".UserBooksCheckedOut" />
     </application>
 
 </manifest>

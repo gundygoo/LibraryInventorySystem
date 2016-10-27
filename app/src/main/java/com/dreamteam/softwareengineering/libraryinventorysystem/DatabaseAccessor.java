@@ -226,30 +226,32 @@ public class DatabaseAccessor {
     public static void AddCustomerData(String customerName,
                                            String idNumber,
                                            String username,
+                                           String password,
                                            String age,
-                                           String authorityLevel,
                                            String homeAddress,
                                            String emailAddress,
                                            Context context) throws IOException{
         String customerDataLine = customerName + "," +
                                     idNumber + "," +
                                     username + "," +
+                                    password + "," +
                                     age + "," +
-                                    authorityLevel + "," +
                                     homeAddress + "," +
                                     emailAddress + "," + "\n";
 
         FileOutputStream fos = context.openFileOutput(customerDataFileName, Context.MODE_APPEND);
         fos.write(customerDataLine.getBytes());
         fos.close();
+
+        AddNewUserLogin(username, password, "customer", context);
     }
 
     //modify existing customer data in the system
     public static void ModifyCustomerData(String customerName,
                                               String idNumber,
                                               String username,
+                                              String password,
                                               String age,
-                                              String authorityLevel,
                                               String homeAddress,
                                               String emailAddress,
                                               Context context) throws IOException{
@@ -293,7 +295,7 @@ public class DatabaseAccessor {
         File tempFile = new File(context.getFilesDir(), tempFileName);
         tempFile.delete();
 
-        AddCustomerData(customerName, idNumber, username, age, authorityLevel, homeAddress, emailAddress, context);
+        AddCustomerData(customerName, idNumber, username, password, age, homeAddress, emailAddress, context);
     }
 
     //view existing customer data in the system
@@ -312,7 +314,7 @@ public class DatabaseAccessor {
         }
         fis.close();
 
-        return new String[] {null, null, null, null, null, null, null};
+        return new String[] {null, null, null, null, null, null};
     }
 
     //get the username for a customer name, for use in our code to get the username required for other calls

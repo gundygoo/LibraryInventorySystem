@@ -21,14 +21,17 @@ public class employeeCheckIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_check_in);
         context = getApplicationContext();
+
         bookNameTextBox = (EditText) findViewById(R.id.checkInBookName);
-        final String bookNameText = bookNameTextBox.getText().toString();
+
         customerUserNameTextBox = (EditText) findViewById(R.id.checkInCustomerUser);
-        final String customerUsernameText = customerUserNameTextBox.getText().toString();
+
         checkOut = (Button) findViewById(R.id.checkInButton);
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String bookNameText = bookNameTextBox.getText().toString();
+                final String customerUsernameText = customerUserNameTextBox.getText().toString();
                 try {
                     DatabaseAccessor.CheckinBookFromCustomer(bookNameText, customerUsernameText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);
