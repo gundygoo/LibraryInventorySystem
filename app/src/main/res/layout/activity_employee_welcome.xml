@@ -10,4 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeWelcome">
 
+    <TextView
+        android:text="Welcome to Dream Team Library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textSize="24sp" />
 </RelativeLayout>
