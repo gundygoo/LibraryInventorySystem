@@ -47,7 +47,7 @@
         android:inputType="textPassword"
         android:hint="Confirm Password"
         android:ems="10"
-        android:id="@+id/confirmNewPassword"
+        android:id="@+id/confirmPassword"
         android:selectAllOnFocus="false" />
 
     <Button

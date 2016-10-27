@@ -14,9 +14,89 @@
         android:text="User Accounts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/userAccountsText"
+        android:id="@+id/ResetPasswordText"
         android:textSize="36sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Edit User Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userAccountsTextEdit"
+        android:textSize="36sp"
+        android:layout_below="@+id/ResetPasswordText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/userAccountsTextEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/customerNameEdit"
+        android:hint="Customer Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/customerNameEdit"
+        android:layout_alignStart="@+id/customerNameEdit"
+        android:id="@+id/customerID"
+        android:hint="customer ID #" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newUsername"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/newEmailAddress"
+        android:hint="New Username" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newEmailAddress"
+        android:hint="New Email Address"
+        android:layout_below="@+id/newUsername"
+        android:layout_alignStart="@+id/ResetPasswordText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newAddress"
+        android:hint="New Address"
+        android:layout_below="@+id/newEmailAddress"
+        android:layout_alignStart="@+id/newEmailAddress" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/newAge"
+        android:layout_below="@+id/newAddress"
+        android:layout_alignStart="@+id/newAddress"
+        android:hint="New Age" />
+
+    <Button
+        android:text="Update User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newAge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/editUpdateButton"
+        android:textAllCaps="false" />
 
 </RelativeLayout>
