@@ -25,7 +25,7 @@ public class EmployeeWelcome extends AppCompatActivity {
         CheckInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent employeeCheckIn= new Intent(context, EmployeeCheckIn.class);
+                Intent employeeCheckIn= new Intent(context, employeeCheckIn.class);
                 startActivity(employeeCheckIn);
             }
         });
@@ -41,7 +41,7 @@ public class EmployeeWelcome extends AppCompatActivity {
         CheckInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent employeeInventory= new Intent(context, EmployeeInventory.class);
+                Intent employeeInventory= new Intent(context, EmployeeInventoryOptions.class);
                 startActivity(employeeInventory);
             }
         });
@@ -49,7 +49,7 @@ public class EmployeeWelcome extends AppCompatActivity {
         UsersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent employeeUsers= new Intent(context, EmployeeUsers.class);
+                Intent employeeUsers= new Intent(context, EmployeeUserOptions.class);
                 startActivity(employeeUsers);
             }
         });

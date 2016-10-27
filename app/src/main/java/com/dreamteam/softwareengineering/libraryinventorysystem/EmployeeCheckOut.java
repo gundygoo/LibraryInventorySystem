@@ -31,12 +31,12 @@ public class EmployeeCheckOut extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    DatabaseAccessor.CheckoutBookToCustomer(bookNameText, customerUsernameText, context);
+                    DatabaseAccessor.CheckinBookFromCustomer(bookNameText, customerUsernameText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);
                     startActivity(employeeWelcome);
                 } catch (IOException e) {
                     e.printStackTrace();
-                    Toast.makeText(context, "Error checking out book to customer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Error checking in book to customer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
