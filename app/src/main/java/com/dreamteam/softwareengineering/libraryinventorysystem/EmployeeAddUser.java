@@ -13,8 +13,12 @@ import java.io.IOException;
 
 public class EmployeeAddUser extends AppCompatActivity {
     public EditText customerPasswordTextBox;
+    public EditText customerIdTextBox;
+    public EditText customerAgeTextBox;
+    public EditText customerHomeAddressTextBox;
+    public EditText customerEmailAddressTextBox;
     public EditText customerUserNameTextBox;
-    public EditText customerAuthorityLevelTextBox;
+    public EditText customerFullNameTextBox;
     public Button AddUser;
     public Context context;
     @Override
@@ -22,18 +26,26 @@ public class EmployeeAddUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_add_user);
         context = getApplicationContext();
-        customerPasswordTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        customerPasswordTextBox = (EditText) findViewById(R.id.passwordTextEntry);
         final String customerPasswordText = customerPasswordTextBox.getText().toString();
-        customerUserNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        customerUserNameTextBox = (EditText) findViewById(R.id.newUsername);
         final String customerUsernameText = customerUserNameTextBox.getText().toString();
-        customerAuthorityLevelTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
-        final String customerAuthorityText = customerAuthorityLevelTextBox.getText().toString();
-        AddUser = (Button) findViewById(R.id.idHere);
+        customerIdTextBox = (EditText) findViewById(R.id.customerID);
+        final String customerIdText = customerIdTextBox.getText().toString();
+        customerAgeTextBox = (EditText) findViewById(R.id.newAge);
+        final String customerAgeText = customerAgeTextBox.getText().toString();
+        customerHomeAddressTextBox = (EditText) findViewById(R.id.newAddress);
+        final String customerHomeAddressText = customerHomeAddressTextBox.getText().toString();
+        customerEmailAddressTextBox = (EditText) findViewById(R.id.newEmailAddress);
+        final String customerEmailAddressText = customerEmailAddressTextBox.getText().toString();
+        customerFullNameTextBox = (EditText) findViewById(R.id.customerNameEdit);
+        final String customerFullNameText = customerFullNameTextBox.getText().toString();
+        AddUser = (Button) findViewById(R.id.editUpdateButton);
         AddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    DatabaseAccessor.AddNewUserLogin( customerUsernameText,customerPasswordText,customerAuthorityText, context);
+                    DatabaseAccessor.AddCustomerData( customerIdText, customerUsernameText,customerAgeText, customerHomeAddressText,customerEmailAddressText,customerPasswordText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);
                     startActivity(employeeWelcome);
                 } catch (IOException e) {

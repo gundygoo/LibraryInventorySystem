@@ -45,7 +45,8 @@
         android:layout_marginTop="64dp"
         android:id="@+id/addUserButton"
         android:layout_below="@+id/userAccountsText"
-        android:layout_alignStart="@+id/editUserButton" />
+        android:layout_alignStart="@+id/editUserButton"
+        android:layout_alignEnd="@+id/editUserButton" />
 
     <Button
         android:text="View Customer"

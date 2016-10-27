@@ -33,7 +33,7 @@ public class employeeViewInventory extends AppCompatActivity {
 
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_employee_view_inventory, inventoryArray);
 
-        ListView listView = (ListView) findViewById(R.id.listviewid);
+        ListView listView = (ListView) findViewById(R.id.inventoryList);
         listView.setAdapter(adapter);
     }
 }

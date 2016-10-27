@@ -21,7 +21,7 @@ public class EmployeeWelcome extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_welcome);
-        CheckInButton = (Button) findViewById(R.id.checkOutBook);
+        CheckInButton = (Button) findViewById(R.id.checkInButtonWelcome);
         CheckInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,7 +29,7 @@ public class EmployeeWelcome extends AppCompatActivity {
                 startActivity(employeeCheckIn);
             }
         });
-        CheckOutButton = (Button) findViewById(R.id.checkOutBook);
+        CheckOutButton = (Button) findViewById(R.id.checkOutBookWelcome);
         CheckOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,15 +37,15 @@ public class EmployeeWelcome extends AppCompatActivity {
                 startActivity(employeeCheckOut);
             }
         });
-        InventoryButton = (Button) findViewById(R.id.idHere);
-        CheckInButton.setOnClickListener(new View.OnClickListener() {
+        InventoryButton = (Button) findViewById(R.id.inventoryWelcome);
+        InventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent employeeInventory= new Intent(context, EmployeeInventoryOptions.class);
                 startActivity(employeeInventory);
             }
         });
-        UsersButton = (Button) findViewById(R.id.idHere);
+        UsersButton = (Button) findViewById(R.id.users);
         UsersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

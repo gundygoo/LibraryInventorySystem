@@ -20,9 +20,9 @@ public class EmployeeInventoryDelete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_inventory_delete);
         context = getApplicationContext();
-        bookNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        bookNameTextBox = (EditText) findViewById(R.id.bookTitleDelete);
         final String bookNameText = bookNameTextBox.getText().toString();
-        DeleteBook = (Button) findViewById(R.id.idHere);
+        DeleteBook = (Button) findViewById(R.id.BookDeleteButton);
         DeleteBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

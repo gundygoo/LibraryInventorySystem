@@ -20,9 +20,9 @@ public class EmployeeInventoryAdd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_inventory_add);
         context = getApplicationContext();
-        bookNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        bookNameTextBox = (EditText) findViewById(R.id.addBookTextField);
         final String bookNameText = bookNameTextBox.getText().toString();
-        AddBook = (Button) findViewById(R.id.idHere);
+        AddBook = (Button) findViewById(R.id.addItemButton);
         AddBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -19,7 +19,7 @@ public class EmployeeInventoryOptions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_employee_inventory_options);
-        AddInventoryButton = (Button) findViewById(R.id.idHere);
+        AddInventoryButton = (Button) findViewById(R.id.deleteUserButton);
         AddInventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,7 +27,7 @@ public class EmployeeInventoryOptions extends AppCompatActivity {
                 startActivity(EmployeeInventoryAdd);
             }
         });
-        DeleteInventoryButton = (Button) findViewById(R.id.idHere);
+        DeleteInventoryButton = (Button) findViewById(R.id.editUserButton);
         DeleteInventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +35,7 @@ public class EmployeeInventoryOptions extends AppCompatActivity {
                 startActivity(EmployeeInventoryDelete);
             }
         });
-        ViewInventoryButton = (Button) findViewById(R.id.idHere);
+        ViewInventoryButton = (Button) findViewById(R.id.addUserButton);
         ViewInventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
