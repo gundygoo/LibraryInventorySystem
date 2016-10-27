@@ -16,7 +16,7 @@ public class EmployeeUserOptions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_user_options);
-        AddUsersButton = (Button) findViewById(R.id.idHere);
+        AddUsersButton = (Button) findViewById(R.id.addUserButton);
         AddUsersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +24,7 @@ public class EmployeeUserOptions extends AppCompatActivity {
                 startActivity(employeeAddUser);
             }
         });
-        EditUsersButton = (Button) findViewById(R.id.idHere);
+        EditUsersButton = (Button) findViewById(R.id.editUserButton);
         EditUsersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

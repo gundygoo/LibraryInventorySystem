@@ -20,16 +20,6 @@
         android:layout_alignStart="@+id/deleteUserButton"
         android:layout_alignEnd="@+id/deleteUserButton" />
 
-    <Button
-        android:text="Add User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:id="@+id/addUserButton"
-        android:layout_below="@+id/userAccountsText"
-        android:layout_alignStart="@+id/editUserButton"
-        android:layout_alignEnd="@+id/editUserButton" />
-
     <TextView
         android:text="User Accounts"
         android:layout_width="wrap_content"
@@ -47,5 +37,14 @@
         android:id="@+id/deleteUserButton"
         android:layout_below="@+id/editUserButton"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Add User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:id="@+id/addUserButton"
+        android:layout_below="@+id/userAccountsText"
+        android:layout_alignStart="@+id/editUserButton" />
 
 </RelativeLayout>

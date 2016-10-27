@@ -30,15 +30,6 @@
         android:layout_alignStart="@+id/addUserButton"
         android:layout_alignEnd="@+id/addUserButton" />
 
-    <Button
-        android:text="View Inventory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:id="@+id/addUserButton"
-        android:layout_below="@+id/userAccountsText"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="Inventory"
         android:layout_width="wrap_content"
@@ -46,6 +37,15 @@
         android:id="@+id/userAccountsText"
         android:textSize="36sp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View Inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:id="@+id/addUserButton"
+        android:layout_below="@+id/userAccountsText"
         android:layout_centerHorizontal="true" />
 
 

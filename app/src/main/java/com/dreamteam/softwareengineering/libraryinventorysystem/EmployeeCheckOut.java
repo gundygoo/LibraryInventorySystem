@@ -22,11 +22,11 @@ public class EmployeeCheckOut extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_check_out);
         context = getApplicationContext();
-        bookNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        bookNameTextBox = (EditText) findViewById(R.id.checkInBookName);
         final String bookNameText = bookNameTextBox.getText().toString();
-        customerUserNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        customerUserNameTextBox = (EditText) findViewById(R.id.checkInCustomerUser);
         final String customerUsernameText = customerUserNameTextBox.getText().toString();
-        checkOut = (Button) findViewById(R.id.idHere);
+        checkOut = (Button) findViewById(R.id.checkOutButton);
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

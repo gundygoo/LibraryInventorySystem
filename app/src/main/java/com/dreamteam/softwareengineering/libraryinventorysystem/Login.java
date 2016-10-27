@@ -46,6 +46,7 @@ public class Login extends AppCompatActivity{
     public EditText usernameTextBox;
     public EditText passwordTextBox;
     public Button submitButton;
+    public Button forgotPassword;
     public Context context;
 
     @Override
@@ -54,13 +55,13 @@ public class Login extends AppCompatActivity{
         setContentView(R.layout.activity_login);
         context = getApplicationContext();
 
-        usernameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        usernameTextBox = (EditText) findViewById(R.id.loginUsername);
         final String usernameText = usernameTextBox.getText().toString();
 
-        passwordTextBox = (EditText) findViewById(R.id.whatever);
+        passwordTextBox = (EditText) findViewById(R.id.loginPassword);
         final String passwordText = passwordTextBox.getText().toString();
 
-        submitButton = (Button) findViewById(R.id.idHere);
+        submitButton = (Button) findViewById(R.id.loginButton);
         submitButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +79,25 @@ public class Login extends AppCompatActivity{
                 }
             }
         });
+        forgotPassword = (Button) findViewById(R.id.loginButton);
+        forgotPassword.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    String response = DatabaseAccessor.RecoverPassword(usernameText, context);
+                    if (response == null){
+                        Toast.makeText(context, "User Credentials Not Found", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Intent employeeRecoverPassword = new Intent(context, EmployeeRecoverPassword.class);
+                        startActivity(employeeRecoverPassword);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
     }
 }
 

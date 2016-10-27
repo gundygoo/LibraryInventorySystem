@@ -21,7 +21,7 @@ public class employeeCheckIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_check_in);
         context = getApplicationContext();
-        bookNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
+        bookNameTextBox = (EditText) findViewById(R.id.checkInBookName);
         final String bookNameText = bookNameTextBox.getText().toString();
         customerUserNameTextBox = (EditText) findViewById(R.id.whateverKateeCallsItHere);
         final String customerUsernameText = customerUserNameTextBox.getText().toString();

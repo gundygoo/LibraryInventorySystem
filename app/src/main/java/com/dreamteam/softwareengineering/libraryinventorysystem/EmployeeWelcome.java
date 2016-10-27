@@ -21,7 +21,7 @@ public class EmployeeWelcome extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_welcome);
-        CheckInButton = (Button) findViewById(R.id.idHere);
+        CheckInButton = (Button) findViewById(R.id.checkOutBook);
         CheckInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,7 +29,7 @@ public class EmployeeWelcome extends AppCompatActivity {
                 startActivity(employeeCheckIn);
             }
         });
-        CheckOutButton = (Button) findViewById(R.id.idHere);
+        CheckOutButton = (Button) findViewById(R.id.checkOutBook);
         CheckOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
