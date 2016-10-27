@@ -31,7 +31,12 @@
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login" />
-        <activity android:name=".EmployeeRegister"></activity>
+        <activity android:name=".EmployeeRegister" />
+        <activity android:name=".employeeCheckIn" />
+        <activity android:name=".employeeViewInventory" />
+        <activity android:name=".EmployeeUserOptions" />
+        <activity android:name=".EmployeeEditUser" />
+        <activity android:name=".EmployeeAddUser"></activity>
     </application>
 
 </manifest>

@@ -19,4 +19,43 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:textSize="24sp" />
+
+    <Button
+        android:text="Check In Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/checkInBook"
+        android:layout_below="@+id/checkOutBook"
+        android:layout_alignStart="@+id/checkOutBook"
+        android:layout_alignEnd="@+id/checkOutBook" />
+
+    <Button
+        android:text="Customer Accounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:id="@+id/users"
+        android:layout_below="@+id/inventory"
+        android:layout_alignStart="@+id/inventory"
+        android:layout_alignEnd="@+id/inventory" />
+
+    <Button
+        android:text="Inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:id="@+id/inventory"
+        android:layout_below="@+id/checkInBook"
+        android:layout_alignStart="@+id/checkInBook"
+        android:layout_alignEnd="@+id/checkInBook" />
+
+    <Button
+        android:text="Check Out Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:id="@+id/checkOutBook"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
