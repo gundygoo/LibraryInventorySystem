@@ -9,5 +9,41 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeInventoryAdd">
+    <TextView
+        android:text="Inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userAccountsText"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:text="Add Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:textSize="36sp"
+        android:layout_below="@+id/userAccountsText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/add"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:id="@+id/addBookTextField"
+        android:hint="Book Title" />
+
+    <Button
+        android:text="Add Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:id="@+id/editUserButton"
+        android:layout_below="@+id/addBookTextField"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

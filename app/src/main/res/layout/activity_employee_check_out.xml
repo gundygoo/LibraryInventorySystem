@@ -10,4 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeCheckOut">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/checkInBookName"
+        android:layout_alignStart="@+id/checkInBookName"
+        android:layout_marginTop="43dp"
+        android:id="@+id/checkInCustomerUser"
+        android:hint="Customer Username" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords|textPersonName"
+        android:ems="10"
+        android:layout_marginTop="60dp"
+        android:id="@+id/checkInBookName"
+        android:hint="Book Name"
+        android:layout_below="@+id/userAccountsText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Check Out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkOutButton"
+        android:textAllCaps="false"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/checkInCustomerUser"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Check Out Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userAccountsText"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
