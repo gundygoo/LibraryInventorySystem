@@ -41,6 +41,8 @@
         <activity android:name=".EmployeeInventoryAdd" />
         <activity android:name=".EmployeeInventoryDelete" />
         <activity android:name=".EmployeeRecoverPassword" />
+        <activity android:name=".EmployeeViewCustomer" />
+        <activity android:name=".UserBooksCheckedOut"></activity>
     </application>
 
 </manifest>
