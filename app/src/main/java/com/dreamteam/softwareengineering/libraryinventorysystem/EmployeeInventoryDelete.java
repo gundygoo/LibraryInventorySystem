@@ -19,7 +19,7 @@ public class EmployeeInventoryDelete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_inventory_delete);
-        context = getApplicationContext();
+        context = this;
         bookNameTextBox = (EditText) findViewById(R.id.bookTitleDelete);
 
         DeleteBook = (Button) findViewById(R.id.BookDeleteButton);

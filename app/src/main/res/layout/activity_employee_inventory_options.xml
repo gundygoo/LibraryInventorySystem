@@ -10,26 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeInventoryOptions">
 
-    <Button
-        android:text="Delete Item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:id="@+id/deleteUserButton"
-        android:layout_below="@+id/editUserButton"
-        android:layout_alignStart="@+id/editUserButton"
-        android:layout_alignEnd="@+id/editUserButton" />
-
-    <Button
-        android:text="Add Item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:id="@+id/editUserButton"
-        android:layout_below="@+id/addUserButton"
-        android:layout_alignStart="@+id/addUserButton"
-        android:layout_alignEnd="@+id/addUserButton" />
-
     <TextView
         android:text="Inventory"
         android:layout_width="wrap_content"
@@ -44,9 +24,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="62dp"
-        android:id="@+id/addUserButton"
+        android:id="@+id/viewInventoryButton"
         android:layout_below="@+id/userAccountsText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="Add Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addItemToInventory"
+        android:layout_below="@+id/viewInventoryButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="Delete Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:id="@+id/deleteItemFromInventory"
+        android:layout_below="@+id/addItemToInventory"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>

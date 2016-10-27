@@ -20,7 +20,7 @@ public class employeeCheckIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_check_in);
-        context = getApplicationContext();
+        context = this;
 
         bookNameTextBox = (EditText) findViewById(R.id.checkInBookName);
 

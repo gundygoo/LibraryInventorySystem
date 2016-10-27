@@ -37,7 +37,8 @@
         android:layout_marginTop="67dp"
         android:id="@+id/addItemButton"
         android:layout_below="@+id/addBookTextField"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
 
     <TextView
         android:text="Inventory"

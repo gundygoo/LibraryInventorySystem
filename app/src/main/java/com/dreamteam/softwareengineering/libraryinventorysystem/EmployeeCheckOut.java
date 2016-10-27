@@ -21,7 +21,7 @@ public class EmployeeCheckOut extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_check_out);
-        context = getApplicationContext();
+        context = this;
         bookNameTextBox = (EditText) findViewById(R.id.checkInBookName);
 
         customerUserNameTextBox = (EditText) findViewById(R.id.checkInCustomerUser);
@@ -30,15 +30,15 @@ public class EmployeeCheckOut extends AppCompatActivity {
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String bookNameText = bookNameTextBox.getText().toString();
-                final String customerUsernameText = customerUserNameTextBox.getText().toString();
+                String bookNameText = bookNameTextBox.getText().toString();
+                String customerUsernameText = customerUserNameTextBox.getText().toString();
                 try {
-                    DatabaseAccessor.CheckinBookFromCustomer(bookNameText, customerUsernameText, context);
+                    DatabaseAccessor.CheckoutBookToCustomer(bookNameText, customerUsernameText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);
                     startActivity(employeeWelcome);
                 } catch (IOException e) {
                     e.printStackTrace();
-                    Toast.makeText(context, "Error checking in book to customer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Error checking out book to customer", Toast.LENGTH_SHORT).show();
                 }
             }
         });

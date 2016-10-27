@@ -19,10 +19,10 @@ public class EmployeeViewCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_view_customer);
-        context = getApplicationContext();
+        context = this;
 
-        customerUserNameTextBox = (EditText) findViewById(R.id.newUsername);
-        ViewCustomerBooks = (Button) findViewById(R.id.editUpdateButton);
+        customerUserNameTextBox = (EditText) findViewById(R.id.viewCustomerUsername);
+        ViewCustomerBooks = (Button) findViewById(R.id.ViewBooks);
         ViewCustomerBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

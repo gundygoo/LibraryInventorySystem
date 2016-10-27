@@ -25,7 +25,7 @@ public class EmployeeEditUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_edit_user);
-        context = getApplicationContext();
+        context = this;
         customerNameTextBox = (EditText) findViewById(R.id.customerNameEdit);
 
         customerIdTextBox = (EditText) findViewById(R.id.customerID);

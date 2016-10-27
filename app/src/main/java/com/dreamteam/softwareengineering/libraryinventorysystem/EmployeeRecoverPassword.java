@@ -22,7 +22,7 @@ public class EmployeeRecoverPassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_recover_password);
-        context = getApplicationContext();
+        context = this;
 
         usernameEntry = (EditText) findViewById(R.id.resetUsername);
         recoveredPassword = (TextView) findViewById(R.id.recoveredPassword);

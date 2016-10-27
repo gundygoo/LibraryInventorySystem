@@ -17,7 +17,7 @@ public class EmployeeWelcome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        context = getApplicationContext();
+        context = this;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_welcome);

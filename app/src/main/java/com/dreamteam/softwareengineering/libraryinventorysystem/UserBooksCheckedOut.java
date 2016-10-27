@@ -1,13 +1,13 @@
 package com.dreamteam.softwareengineering.libraryinventorysystem;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserBooksCheckedOut extends AppCompatActivity {
@@ -17,7 +17,9 @@ public class UserBooksCheckedOut extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_books_checked_out);
-        context = getApplicationContext();
+        context = this;
+
+        customerBookList = new ArrayList<>();
 
         try {
             customerBookList = DatabaseAccessor.ViewCustomerBookList(EmployeeViewCustomer.customerUsername, context);
@@ -25,9 +27,9 @@ public class UserBooksCheckedOut extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_employee_view_inventory, customerBookList);
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, customerBookList);
 
-        ListView listView = (ListView) findViewById(R.id.inventoryList);
+        ListView listView = (ListView) findViewById(R.id.BooksCheckedOutList);
         listView.setAdapter(adapter);
     }
 }

@@ -25,35 +25,32 @@ public class EmployeeAddUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_add_user);
-        context = getApplicationContext();
+        context = this;
 
         customerPasswordTextBox = (EditText) findViewById(R.id.passwordTextEntry);
 
-        customerUserNameTextBox = (EditText) findViewById(R.id.newUsername);
+        customerUserNameTextBox = (EditText) findViewById(R.id.customerUsernameAdd);
 
-        customerIdTextBox = (EditText) findViewById(R.id.customerID);
+        customerAgeTextBox = (EditText) findViewById(R.id.customerAgeAdd);
 
-        customerAgeTextBox = (EditText) findViewById(R.id.newAge);
+        customerHomeAddressTextBox = (EditText) findViewById(R.id.customerAddressAdd);
 
-        customerHomeAddressTextBox = (EditText) findViewById(R.id.newAddress);
+        customerEmailAddressTextBox = (EditText) findViewById(R.id.customerEmailAdd);
 
-        customerEmailAddressTextBox = (EditText) findViewById(R.id.newEmailAddress);
+        customerFullNameTextBox = (EditText) findViewById(R.id.customerFullNameAdd);
 
-        customerFullNameTextBox = (EditText) findViewById(R.id.customerNameEdit);
-
-        AddUser = (Button) findViewById(R.id.editUpdateButton);
+        AddUser = (Button) findViewById(R.id.addUserAccountSubmitButton);
         AddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String customerPasswordText = customerPasswordTextBox.getText().toString();
                 final String customerUsernameText = customerUserNameTextBox.getText().toString();
-                final String customerIdText = customerIdTextBox.getText().toString();
                 final String customerAgeText = customerAgeTextBox.getText().toString();
                 final String customerHomeAddressText = customerHomeAddressTextBox.getText().toString();
                 final String customerEmailAddressText = customerEmailAddressTextBox.getText().toString();
                 final String customerFullNameText = customerFullNameTextBox.getText().toString();
                 try {
-                    DatabaseAccessor.AddCustomerData(customerFullNameText, customerIdText, customerUsernameText,customerPasswordText, customerAgeText, customerHomeAddressText,customerEmailAddressText, context);
+                    DatabaseAccessor.AddCustomerData(customerFullNameText, "007", customerUsernameText,customerPasswordText, customerAgeText, customerHomeAddressText,customerEmailAddressText, context);
                     Intent employeeWelcome = new Intent(context, EmployeeWelcome.class);
                     startActivity(employeeWelcome);
                 } catch (IOException e) {

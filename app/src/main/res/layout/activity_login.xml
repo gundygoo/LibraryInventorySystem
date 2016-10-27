@@ -61,4 +61,10 @@
         android:typeface="normal"
         android:textAllCaps="false" />
 
+    <Button
+        android:text="Add Prototype Data"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/protoDataButton" />
+
 </LinearLayout>

@@ -11,6 +11,17 @@
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeUserOptions">
 
     <Button
+        android:text="Add User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:id="@+id/addUserButton"
+        android:layout_below="@+id/userAccountsText"
+        android:layout_alignStart="@+id/editUserButton"
+        android:layout_alignEnd="@+id/editUserButton"
+        android:textAllCaps="false" />
+
+    <Button
         android:text="Edit User"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +29,8 @@
         android:id="@+id/editUserButton"
         android:layout_below="@+id/addUserButton"
         android:layout_alignStart="@+id/deleteUserButton"
-        android:layout_alignEnd="@+id/deleteUserButton" />
+        android:layout_alignEnd="@+id/deleteUserButton"
+        android:textAllCaps="false" />
 
     <TextView
         android:text="User Accounts"
@@ -30,25 +42,6 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Delete User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:id="@+id/deleteUserButton"
-        android:layout_below="@+id/editUserButton"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Add User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:id="@+id/addUserButton"
-        android:layout_below="@+id/userAccountsText"
-        android:layout_alignStart="@+id/editUserButton"
-        android:layout_alignEnd="@+id/editUserButton" />
-
-    <Button
         android:text="View Customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,5 +51,15 @@
         android:layout_alignEnd="@+id/deleteUserButton"
         android:layout_alignStart="@+id/deleteUserButton"
         android:id="@+id/viewCustomer" />
+
+    <Button
+        android:text="Delete User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/deleteUserButton"
+        android:layout_below="@+id/editUserButton"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

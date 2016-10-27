@@ -41,6 +41,7 @@ public class DatabaseAccessor {
                     return credentials[2];
                 }
             }
+            currentLine = reader.readLine();
         }
         fis.close();
 
@@ -58,6 +59,7 @@ public class DatabaseAccessor {
             if (credentials[0].equals(username)){
                 return credentials[1];
             }
+            currentLine = reader.readLine();
         }
         fis.close();
 
@@ -112,6 +114,7 @@ public class DatabaseAccessor {
                 String currentWrite = currentLine + "\n";
                 fos.write(currentWrite.getBytes());
             }
+            currentLine = reader.readLine();
         }
         fis.close();
         fos.close();
@@ -129,6 +132,7 @@ public class DatabaseAccessor {
         while (currentLine2 != null){
             String currentWrite2 = currentLine2 + "\n";
             fos2.write(currentWrite2.getBytes());
+            currentLine2 = reader2.readLine();
         }
         fis2.close();
         fos2.close();
@@ -151,6 +155,7 @@ public class DatabaseAccessor {
         String currentLine = reader.readLine();
         while(currentLine != null){
             customerBookList.add(currentLine);
+            currentLine = reader.readLine();
         }
         fis.close();
 
@@ -180,6 +185,7 @@ public class DatabaseAccessor {
                 String currentWrite = currentLine + "\n";
                 fos.write(currentWrite.getBytes());
             }
+            currentLine = reader.readLine();
         }
         fis.close();
         fos.close();
@@ -197,6 +203,7 @@ public class DatabaseAccessor {
         while (currentLine2 != null){
             String currentWrite2 = currentLine2 + "\n";
             fos2.write(currentWrite2.getBytes());
+            currentLine2 = reader2.readLine();
         }
         fis2.close();
         fos2.close();
@@ -216,6 +223,7 @@ public class DatabaseAccessor {
         String currentLine = reader.readLine();
         while(currentLine != null){
             inventoryList.add(currentLine);
+            currentLine = reader.readLine();
         }
         fis.close();
 
@@ -270,6 +278,7 @@ public class DatabaseAccessor {
                     fos.write(currentWrite.getBytes());
                 }
             }
+            currentLine = reader.readLine();
         }
         fis.close();
         fos.close();
@@ -287,6 +296,7 @@ public class DatabaseAccessor {
         while (currentLine2 != null){
             String currentWrite2 = currentLine2 + "\n";
             fos2.write(currentWrite2.getBytes());
+            currentLine2 = reader2.readLine();
         }
         fis2.close();
         fos2.close();
@@ -311,6 +321,7 @@ public class DatabaseAccessor {
                     return customerData;
                 }
             }
+            currentLine = reader.readLine();
         }
         fis.close();
 
@@ -330,6 +341,7 @@ public class DatabaseAccessor {
                     return customerData[2];
                 }
             }
+            currentLine = reader.readLine();
         }
 
         return null;

@@ -22,12 +22,13 @@ public class Login extends AppCompatActivity{
     public Button submitButton;
     public Button forgotPassword;
     public Context context;
+    public Button prototypeDataButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        context = getApplicationContext();
+        context = this;
 
         usernameTextBox = (EditText) findViewById(R.id.loginUsername);
 
@@ -53,12 +54,30 @@ public class Login extends AppCompatActivity{
                 }
             }
         });
+
         forgotPassword = (Button) findViewById(R.id.forgotPassword);
         forgotPassword.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent employeeRecoverPassword = new Intent(context, EmployeeRecoverPassword.class);
                 startActivity(employeeRecoverPassword);
+            }
+        });
+
+        prototypeDataButton = (Button) findViewById(R.id.protoDataButton);
+        prototypeDataButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    DatabaseAccessor.AddCustomerData("Erik Gunderson", "007", "gundy", "12345", "21", "123 West Ave", "someone@gmail.com", context);
+                    DatabaseAccessor.AddBookToInventory("The Illiad", context);
+                    DatabaseAccessor.AddBookToInventory("The Odyssey", context);
+                    DatabaseAccessor.CreateNewCustomerAccount("gundy", context);
+                    DatabaseAccessor.AddBookToInventory("Harry Potter and The Sorcerer's Stone", context);
+                    Toast.makeText(context, "adding prototype data successful", Toast.LENGTH_SHORT).show();
+                } catch(IOException e){
+                    Toast.makeText(context, "error adding test data", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

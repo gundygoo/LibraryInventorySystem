@@ -19,7 +19,7 @@ public class EmployeeInventoryAdd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_inventory_add);
-        context = getApplicationContext();
+        context = this;
         bookNameTextBox = (EditText) findViewById(R.id.addBookTextField);
 
         AddBook = (Button) findViewById(R.id.addItemButton);
