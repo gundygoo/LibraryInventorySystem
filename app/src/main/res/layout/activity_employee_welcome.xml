@@ -11,40 +11,32 @@
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeWelcome">
 
     <Button
-        android:text="Check In Book"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:id="@+id/addUserButton"
-        android:layout_below="@+id/checkOutBook"
-        android:layout_alignStart="@+id/checkOutBook"
-        android:layout_alignEnd="@+id/checkOutBook" />
-
-    <Button
         android:text="Customer Accounts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
         android:id="@+id/users"
-        android:layout_below="@+id/addBook"
-        android:layout_alignStart="@+id/addBook"
-        android:layout_alignEnd="@+id/addBook" />
+        android:layout_below="@+id/inventoryWelcome"
+        android:layout_alignStart="@+id/inventoryWelcome"
+        android:layout_alignEnd="@+id/inventoryWelcome"
+        android:textAllCaps="false" />
 
     <Button
         android:text="Inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:id="@+id/addBook"
-        android:layout_below="@+id/addUserButton"
-        android:layout_alignStart="@+id/addUserButton"
-        android:layout_alignEnd="@+id/addUserButton" />
+        android:id="@+id/inventoryWelcome"
+        android:layout_below="@+id/checkInButtonWelcome"
+        android:layout_alignStart="@+id/checkInButtonWelcome"
+        android:layout_alignEnd="@+id/checkInButtonWelcome"
+        android:textAllCaps="false" />
 
     <TextView
         android:text="Welcome to Dream Team Library"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/userAccountsText"
+        android:id="@+id/WelcomeText"
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -54,7 +46,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="83dp"
-        android:id="@+id/checkOutBook"
-        android:layout_below="@+id/userAccountsText"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/checkOutBookWelcome"
+        android:layout_below="@+id/WelcomeText"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="Check In Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/checkInButtonWelcome"
+        android:layout_below="@+id/checkOutBookWelcome"
+        android:layout_alignEnd="@+id/checkOutBookWelcome"
+        android:layout_alignStart="@+id/checkOutBookWelcome"
+        android:textAllCaps="false" />
 </RelativeLayout>

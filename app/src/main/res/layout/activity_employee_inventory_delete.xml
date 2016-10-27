@@ -11,20 +11,42 @@
     tools:context="com.dreamteam.softwareengineering.libraryinventorysystem.EmployeeInventoryDelete">
 
     <TextView
-        android:text="Inventory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/userAccountsText"
-        android:textSize="36sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:text="Delete Item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/deleteText"
         android:textSize="36sp"
-        android:layout_below="@+id/userAccountsText"
+        android:layout_below="@+id/InventoryText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/deleteText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:id="@+id/bookTitleDelete"
+        android:hint="Item Title" />
+
+    <Button
+        android:text="Delete Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:id="@+id/BookDeleteButton"
+        android:textAllCaps="false"
+        android:layout_below="@+id/bookTitleDelete"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/InventoryText"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

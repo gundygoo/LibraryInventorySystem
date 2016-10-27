@@ -18,26 +18,8 @@
         android:id="@+id/editUserButton"
         android:layout_below="@+id/addUserButton"
         android:layout_alignStart="@+id/deleteUserButton"
-        android:layout_alignEnd="@+id/deleteUserButton" />
-
-    <Button
-        android:text="Add User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:id="@+id/addUserButton"
-        android:layout_below="@+id/userAccountsText"
-        android:layout_alignStart="@+id/editUserButton"
-        android:layout_alignEnd="@+id/editUserButton" />
-
-    <TextView
-        android:text="User Accounts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/userAccountsText"
-        android:textSize="36sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignEnd="@+id/deleteUserButton"
+        android:textAllCaps="false" />
 
     <Button
         android:text="Delete User"
@@ -46,6 +28,27 @@
         android:layout_marginTop="32dp"
         android:id="@+id/deleteUserButton"
         android:layout_below="@+id/editUserButton"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:text="User Accounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserAccountsText"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Add User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:id="@+id/addUserButton"
+        android:layout_below="@+id/UserAccountsText"
+        android:layout_alignEnd="@+id/editUserButton"
+        android:layout_alignStart="@+id/editUserButton"
+        android:textAllCaps="false" />
 
 </RelativeLayout>
