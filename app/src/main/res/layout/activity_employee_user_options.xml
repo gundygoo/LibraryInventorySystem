@@ -51,4 +51,15 @@
         android:layout_alignStart="@+id/editUserButton"
         android:textAllCaps="false" />
 
+    <Button
+        android:text="View Customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:textAllCaps="false"
+        android:layout_below="@+id/deleteUserButton"
+        android:layout_alignEnd="@+id/deleteUserButton"
+        android:layout_alignStart="@+id/deleteUserButton"
+        android:id="@+id/viewCustomer" />
+
 </RelativeLayout>
