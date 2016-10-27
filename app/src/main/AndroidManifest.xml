@@ -30,7 +30,8 @@
         <activity android:name=".EmployeeWelcome" />
         <activity
             android:name=".Login"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
+        <activity android:name=".EmployeeRegister"></activity>
     </application>
 
 </manifest>

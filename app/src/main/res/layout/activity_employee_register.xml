@@ -14,11 +14,11 @@
     <!-- Login progress -->
 
     <TextView
-        android:text="Employee Login"
+        android:text="Register New Employee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:gravity="center"
         android:layout_weight="0.06" />
 
@@ -41,24 +41,22 @@
         android:id="@+id/editText3"
         android:selectAllOnFocus="false" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Confirm Password"
+        android:ems="10"
+        android:id="@+id/confirmPassword"
+        android:selectAllOnFocus="false" />
+
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/register_button"
         style="?android:textAppearanceSmall"
         android:layout_width="213dp"
         android:layout_height="68dp"
         android:layout_marginTop="16dp"
-        android:text="Login"
+        android:text="Register"
         android:textStyle="bold" />
-
-    <Button
-        android:text="Forgot Password?"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:id="@+id/forgot-password"
-        android:layout_gravity="right"
-        android:capitalize="none"
-        android:textSize="10sp"
-        android:typeface="normal"
-        android:textAllCaps="false" />
 
 </LinearLayout>
