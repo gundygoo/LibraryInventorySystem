@@ -36,7 +36,10 @@
         <activity android:name=".employeeViewInventory" />
         <activity android:name=".EmployeeUserOptions" />
         <activity android:name=".EmployeeEditUser" />
-        <activity android:name=".EmployeeAddUser"></activity>
+        <activity android:name=".EmployeeAddUser" />
+        <activity android:name=".EmployeeInventoryOptions" />
+        <activity android:name=".EmployeeInventoryAdd" />
+        <activity android:name=".EmployeeInventoryDelete"></activity>
     </application>
 
 </manifest>
